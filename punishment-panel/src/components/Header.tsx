@@ -1,18 +1,28 @@
 import React from 'react';
-import '../index.css';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 const Header: React.FC = () => {
   return (
-    <header style={{ backgroundColor: '#2C2F33', padding: '10px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <img
-          src="/logo-bot.png"
-          alt="Logo do Bot"
-          style={{ width: '40px', height: '40px', marginRight: '6px' }}
-        />
-        <h1 style={{ color: '#fe3838', margin: 0 }}>Punishment</h1>
-      </div>
-    </header>
+    <AppBar position="static" style={{ backgroundColor: '#23272A' }}>
+      <Toolbar style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            src="/logo.png"
+            alt="Logo do Bot"
+            style={{ width: '40px', height: '40px', marginRight: '10px' }}
+          />
+          <Typography variant="h6" component="div" style={{ color: '#FE3838' }}>
+            Punishment
+          </Typography>
+        </div>
+        <Button color="inherit" href="/login">
+          Login
+        </Button>
+      </Toolbar>
+    </AppBar>
   );
 };
 
